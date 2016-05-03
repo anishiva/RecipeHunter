@@ -16,13 +16,12 @@ gem 'poltergeist', '~> 1.6.0'
 gem 'phantomjs', '~> 1.9.8.0'
 gem 'httparty'
 
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', group: :development 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '8.2.5'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
   gem 'spring'
 end
 
