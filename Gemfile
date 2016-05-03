@@ -13,6 +13,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'capybara', '~> 2.4.4'
 gem 'poltergeist', '~> 1.6.0'
 gem 'phantomjs', '~> 1.9.8.0'
+gem 'httparty'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -24,4 +25,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'httparty'
+group :production do
+  gem 'rails_12factor'
+end	
+
