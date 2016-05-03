@@ -179,7 +179,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  byebug
+  byebug (= 8.2.5)
   capybara (~> 2.4.4)
   coffee-rails (~> 4.1.0)
   httparty
