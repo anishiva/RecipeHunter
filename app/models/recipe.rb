@@ -8,6 +8,10 @@ class Recipe
 		format :json
 	
 	def self.for (term)
-		get("/search",query: {q:term})["recipes"]
+		if term.present?
+			get("/search",query: {q:term})["recipes"]
+		else
+			get("/search",query: {q:'chocolate'})["recipes"]
+		end
 	end
 end

@@ -1,4 +1,6 @@
-<h1>Searching for Recipes - <%= @search_term%></h1>
+<%= render 'form' %>
+<h3>Recipes : <%=@search_term || 'chocolate' %></h3>
+<br>
 <% if @recipes.nil? %>
 	<p>No recipes found ...Sorry</p>
 <% else %>
@@ -6,13 +8,13 @@
 		<tr>
 			<th>Image</th>
 			<th>Title</th>
-			<th>Social Rank</th>
+			<th>Social Rank (in %)</th>
 		</tr>
 		<% @recipes.each do |recipe|%>
 			<tr class=<%=cycle('even', 'odd')%>>
 				<td><%= link_to image_tag(recipe["image_url"], size:"100x100"),recipe["f2f_url"]%></td>
 				<td><%= link_to(sanitize(recipe["title"]),recipe["f2f_url"])	%> </td>
-				<td><%= recipe["social_rank"]%></td>
+				<td><%= '%2i' % recipe["social_rank"]%></td>
 			</tr>
 		<% end %>
 	</table>
