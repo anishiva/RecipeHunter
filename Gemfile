@@ -15,6 +15,7 @@ gem 'capybara', '~> 2.4.4'
 gem 'poltergeist', '~> 1.6.0'
 gem 'phantomjs', '~> 1.9.8.0'
 gem 'httparty'
+gem 'will_paginate', '~> 3.1'
 
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', group: :development 

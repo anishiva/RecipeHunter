@@ -1,6 +1,5 @@
 <%= render 'form' %>
 <h3>Recipes : <%=@search_term || 'chocolate' %></h3>
-<br>
 <% if @recipes.nil? %>
 	<p>No recipes found ...Sorry</p>
 <% else %>
@@ -19,3 +18,4 @@
 		<% end %>
 	</table>
 <% end %>
+<%= will_paginate @recipes%>
