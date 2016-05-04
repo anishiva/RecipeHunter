@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   test "should get index" do
-    get "recipes#index"
+    get "/recipies/index"
     assert_response :success
   end
 
