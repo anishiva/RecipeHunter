@@ -1,8 +1,9 @@
-require 'test_helper'
+require_relative '../test_helper'
 
 class RecipesControllerTest < ActionController::TestCase
   test "should get index" do
-    get "/recipies/index"
+  	#byebug
+    get :index
     assert_response :success
   end
 
